@@ -2,7 +2,7 @@ name: integracion continua node.js
 
 on: 
   pull_request:
-    branches: [main]
+    branches: [merge/main1]
   
 jobs: 
   ci_to_main:
