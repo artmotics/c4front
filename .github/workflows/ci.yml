@@ -1,6 +1,6 @@
 name: CI
 
-on: [push]
+on: 
       
 
 jobs:
@@ -9,14 +9,14 @@ jobs:
 
     strategy:
       matrix:
-        node-version: 12
+        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v1
     - name: Use node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
-        node-version: 12
+        node-version: ${{ matrix.node-version }}
     - name: yarn install
       run: |
         yarn install
